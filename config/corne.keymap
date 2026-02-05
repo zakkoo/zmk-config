@@ -87,7 +87,7 @@
                         bindings = <
    &kp LS(EQUAL) &kp MINUS &kp RA(N2) &kp RA(N3) &kp LS(N6) &kp LS(N5)   &kp LS(RBKT) &kp LBKT &kp LS(N2) &kp SEMI &kp LS(MINUS) &kp DEL
    &kp TAB       &kp SQT   &none      &kp LBKT   &kp RA(LBKT) &kp RA(RBKT)   &kp LS(N8) &kp LS(N9) &kp RA(EQUAL) &kp LS(N0) &kp BSLH &none
-   &kp LSHFT     &kp EQUAL &kp RA(N7) &kp RA(GRAVE) &kp RA(SQT) &kp RA(BSLH)   &kp GRAVE &kp LS(GRAVE) &kp LS(N7) &kp LS(COMMA) &kp LS(FSLH) &none
+   &kp LSHFT     &kp EQUAL &kp RA(N7) &kp RA(NUBS) &kp RA(SQT) &kp RA(BSLH)   &kp NUBS &kp LS(NUBS) &kp LS(N7) &kp LS(COMMA) &kp LS(FSLH) &none
                                     &trans      &trans       &trans         &trans     &trans     &trans
                         >;
                 };
