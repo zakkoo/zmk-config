@@ -13,6 +13,7 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
+                        label = "Mac 0";
 // -----------------------------------------------------------------------------------------
 // Layer 0: QWERTZ Base Layer (Writing Optimized)
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Z  |  U  |  I  |  O  |  P  | BSPC |
@@ -28,6 +29,7 @@
                 };
 
                 lower_layer {
+                        label = "Mac 1";
 // -----------------------------------------------------------------------------------------
 // Layer 1: Programming Symbols + Umlauts
 // |  `   |  '  |  @  |  #  |  &  |  %  |   |  !  |  ü  |  "  |  ö  |  ?  | DEL  |
@@ -43,14 +45,63 @@
                 };
 
                 raise_layer {
+                        label = "Mac 2";
 // -----------------------------------------------------------------------------------------
-// Layer 2: Function Keys + Numpad
-// |  F1  |  F2 |  F3 |  F4 |  F5 |  F6 |   |  /  |  7  |  8  |  9  |  -  |      |
+// Layer 2: Function Keys + Numpad (macOS)
+// |  F1  |  F2 |  F3 |  F4 |  F5 |  F6 |   |  /  |  7  |  8  |  9  |  -  | WIN  |
 // |  F7  |  F8 |  F9 | F10 | F11 | F12 |   |  *  |  4  |  5  |  6  |  +  |      |
 // |BTNXT |     |arrU |arrD |arrL |arrR |   |  0  |  1  |  2  |  3  |  .  |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-   &kp F1     &kp F2   &kp F3   &kp F4   &kp F5    &kp F6     &kp LS(N7)  &kp N7 &kp N8 &kp N9 &kp FSLH &none
+   &kp F1     &kp F2   &kp F3   &kp F4   &kp F5    &kp F6     &kp LS(N7)  &kp N7 &kp N8 &kp N9 &kp FSLH &to 3
+   &kp F7     &kp F8   &kp F9   &kp F10  &kp F11   &kp F12    &kp LS(N3) &kp N4 &kp N5 &kp N6 &kp LS(N1)  &none
+   &bt BT_NXT &none    &kp UP   &kp DOWN &kp LEFT  &kp RIGHT  &kp N0    &kp N1 &kp N2 &kp N3 &kp DOT   &none
+                                &trans   &trans    &trans     &kp KP_ENTER    &trans &trans
+                        >;
+                };
+
+                win_default_layer {
+                        label = "Win 0";
+// -----------------------------------------------------------------------------------------
+// Layer 3: QWERTZ Base Layer (Windows)
+// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Z  |  U  |  I  |  O  |  P  | BSPC |
+// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  :  |      |
+// | SHFT |  Y  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  -  | ESC  |
+//                    |GUIL | LWR | SPC |   | ENT | RSE |GUIR |
+                        bindings = <
+   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P     &kp BSPC
+   &kp LCTRL &kp A &kp S &kp D &lt 5 F &kp G   &kp H &lt 4 J  &kp K     &kp L   &kp LS(DOT) &none
+   &sk LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
+                  &sk LGUI &mo 4 &kp SPACE   &kp RET &mo 5 &sk RGUI
+                        >;
+                };
+
+                win_lower_layer {
+                        label = "Win 1";
+// -----------------------------------------------------------------------------------------
+// Layer 4: Programming Symbols + Umlauts (Windows)
+// |  `   |  '  |  @  |  #  |  &  |  %  |   |  !  |  ü  |  "  |  ö  |  ?  | DEL  |
+// | TAB  |  ä  |     |  ü  |  [  |  ]  |   |  (  |  )  |  ~  |  =  |  $  |      |
+// | SHFT |  ^  |  |  |  \  |  {  |  }  |   |  <  |  >  |  /  |  ;  |  _  |      |
+//                    |     |     |     |   |     |     |     |
+                        bindings = <
+   &kp LS(EQUAL) &kp MINUS &kp RA(N2) &kp RA(N3) &kp LS(N6) &kp LS(N5)   &kp LS(RBKT) &kp LBKT &kp LS(N2) &kp SEMI &kp LS(MINUS) &kp DEL
+   &kp TAB       &kp SQT   &none      &kp LBKT   &kp RA(LBKT) &kp RA(RBKT)   &kp LS(N8) &kp LS(N9) &kp RA(EQUAL) &kp LS(N0) &kp BSLH &none
+   &kp LSHFT     &kp EQUAL &kp RA(N7) &kp RA(GRAVE) &kp RA(SQT) &kp RA(BSLH)   &kp GRAVE &kp LS(GRAVE) &kp LS(N7) &kp LS(COMMA) &kp LS(FSLH) &none
+                                    &trans      &trans       &trans         &trans     &trans     &trans
+                        >;
+                };
+
+                win_raise_layer {
+                        label = "Win 2";
+// -----------------------------------------------------------------------------------------
+// Layer 5: Function Keys + Numpad (Windows)
+// |  F1  |  F2 |  F3 |  F4 |  F5 |  F6 |   |  /  |  7  |  8  |  9  |  -  | MAC  |
+// |  F7  |  F8 |  F9 | F10 | F11 | F12 |   |  *  |  4  |  5  |  6  |  +  |      |
+// |BTNXT |     |arrU |arrD |arrL |arrR |   |  0  |  1  |  2  |  3  |  .  |      |
+//                    |     |     |     |   |     |     |     |
+                        bindings = <
+   &kp F1     &kp F2   &kp F3   &kp F4   &kp F5    &kp F6     &kp LS(N7)  &kp N7 &kp N8 &kp N9 &kp FSLH &to 0
    &kp F7     &kp F8   &kp F9   &kp F10  &kp F11   &kp F12    &kp LS(N3) &kp N4 &kp N5 &kp N6 &kp LS(N1)  &none
    &bt BT_NXT &none    &kp UP   &kp DOWN &kp LEFT  &kp RIGHT  &kp N0    &kp N1 &kp N2 &kp N3 &kp DOT   &none
                                 &trans   &trans    &trans     &kp KP_ENTER    &trans &trans
