@@ -35,10 +35,10 @@
 // | SHFT |  ^  |  |  |  \  |  {  |  }  |   |  <  |  >  |  /  |  ;  |  _  |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-   &kp GRAVE &kp SQT  &kp AT   &kp HASH &kp AMPS &kp PRCNT   &kp EXCL &kp LBKT &kp DQT  &kp RBKT &kp QMARK &kp DEL
-   &kp TAB   &kp LBKT &none    &kp RBKT &kp LBKT &kp RBKT    &kp LPAR &kp RPAR &kp TILDE &kp EQUAL &kp DLLR &none
-   &kp LSHFT &kp CARET &kp PIPE &kp BSLH &kp LBRC &kp RBRC   &kp LT   &kp GT   &kp FSLH &kp SEMI &kp UNDER &none
-                              &trans   &trans    &trans      &trans   &trans   &trans
+   &kp LS(EQUAL) &kp MINUS &kp RA(N2) &kp RA(N3) &kp LS(N6) &kp LS(N5)   &kp LS(RBKT) &kp LBKT &kp LS(N2) &kp SEMI &kp LS(MINUS) &kp DEL
+   &kp TAB       &kp SQT   &none      &kp LBKT   &kp RA(LBKT) &kp RA(RBKT)   &kp LS(N8) &kp LS(N9) &kp RA(EQUAL) &kp LS(N0) &kp BSLH &none
+   &kp LSHFT     &kp EQUAL &kp RA(N7) &kp RA(GRAVE) &kp RA(SQT) &kp RA(BSLH)   &kp GRAVE &kp LS(GRAVE) &kp LS(N7) &kp LS(COMMA) &kp LS(FSLH) &none
+                                    &trans      &trans       &trans         &trans     &trans     &trans
                         >;
                 };
 
