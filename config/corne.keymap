@@ -9,104 +9,103 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-        keymap {
-                compatible = "zmk,keymap";
+    keymap {
+        compatible = "zmk,keymap";
 
-                default_layer {
-                        label = "Mac 0";
-// -----------------------------------------------------------------------------------------
-// Layer 0 - Mac 0
-// | esc  |  Q  |  W  |  E  |  R  |  T  |   |  Z  |  U  |  I  |  O  |  P  | BSPC |
-// | tab  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  :  | shft |
-// | ctrl |  Y  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  -  |caps  |
-//                    |GUIL | LWR | SPC |   | ret | RSE |GUIR |
-                        bindings = <
-   &kp ESC &kp Q &kp W &kp E &kp R &kp T         &kp Y &kp U  &kp I &kp O &kp P &kp BSPC
-   &kp TAB &kp A &kp S &kp D &lt 2 F &kp G       &kp H &lt 1 J &kp K &kp L &kp LS(DOT) &sk RSHFT
-   &sk LCTRL &kp Z &kp X &kp C &kp V &kp B       &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp CAPS
-                  &sk LGUI &mo 1 &kp SPACE       &kp RET &mo 2 &sk RGUI
-                        >;
-                };
-
-                lower_layer {
-                        label = "Mac 1";
-// -----------------------------------------------------------------------------------------
-// Layer 1 - Mac 1
-// |   `   |      |     |     |  #   |  %  |   |  !  |  ?  |  "  |  '  |  @  |   del |
-// |   \   |      |     |     |  [   |  ]  |   |  (  |  )  |  ;  |  ä  |  ö  |   ü   |
-// |   ^   |      |     |     |  <   |  >  |   |  {  |  }  |  /  |  =  |  _  |   &   |
-//                      |     |      |     |   |  $  |  |  |  ~  |
-                        bindings = <
-   &kp LS(EQUAL) &none &none &none &kp RA(N3) &kp LS(N5)   &kp LS(RBKT) &kp LS(MINUS) &kp LS(N2) &kp MINUS &kp RA(G) &kp DEL
-   &kp RA(LS(N7)) &none &none &none &kp RA(N5) &kp RA(N6)   &kp LS(N8) &kp LS(N9) &kp LS(COMMA) &kp SQT &kp SEMI &kp LBKT
-   &kp EQUAL &none &none &none &kp GRAVE &kp LS(GRAVE)   &kp RA(N8) &kp RA(N9) &kp LS(N7) &kp LS(N0) &kp LS(FSLH) &kp LS(N6)
-                                    &trans      &trans       &trans         &kp BSLH     &kp RA(N7)     &kp RA(N)
-                        >;
-                };
-
-                raise_layer {
-                        label = "Mac 2";
-// -----------------------------------------------------------------------------------------
-// Layer 2 - Mac 2
-// |  F1  |  F2 |  F3 |arrU |  F4 | F5   |   |  /  |  7  |  8  |  9  |  -  | WIN  |
-// |  F6  |  F7 |arrL |arrD |arrR | F8   |   |  *  |  4  |  5  |  6  |  +  |      |
-// |  F9  | F10 | F11 | F12 |     |btnnxt|   |  0  |  1  |  2  |  3  |  .  |      |
-//                    |     |     |      |   |enter|     |     |
-                        bindings = <
-   &kp F1     &kp F2   &kp F3   &kp UP   &kp F4    &kp F5            &kp LS(N7)  &kp N7 &kp N8 &kp N9 &kp FSLH &to 3
-   &kp F6     &kp F7   &kp LEFT   &kp DOWN  &kp RIGHT   &kp F8       &kp LS(N3) &kp N4 &kp N5 &kp N6 &kp LS(N1)  &none
-   &kp F9 &kp F10    &kp F11   &kp F12 &none &bt BT_NXT             &kp N0    &kp N1 &kp N2 &kp N3 &kp DOT   &none
-                                &trans   &trans    &trans            &kp KP_ENTER    &trans &trans
-                        >;
-                };
-
-                win_default_layer {
-                        label = "Win 0";
-// -----------------------------------------------------------------------------------------
-// Layer 3 - Win 0
-// | esc  |  Q  |  W  |  E  |  R  |  T  |   |  Z  |  U  |  I  |  O  |  P  | BSPC |
-// | tab  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  :  | shft |
-// | ctrl |  Y  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  -  |caps  |
-//                    |GUIL | LWR | SPC |   | ret | RSE |GUIR |
-                        bindings = <
-   &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P     &kp BSPC
-   &kp TAB &kp A &kp S &kp D &lt 5 F &kp G   &kp H &lt 4 J  &kp K     &kp L   &kp LS(DOT) &sk RSHFT
-   &sk LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp CAPS
-                  &sk LGUI &mo 4 &kp SPACE   &kp RET &mo 5 &sk RGUI
-                        >;
-                };
-
-                win_lower_layer {
-                        label = "Win 1";
-// -----------------------------------------------------------------------------------------
-// Layer 4 - Win 1
-// |   `   |      |     |     |  #   |  %  |   |  !  |  ?  |  "  |  '  |  @  |   del |
-// |   \   |      |     |     |  [   |  ]  |   |  (  |  )  |  ;  |  ä  |  ö  |   ü   |
-// |   ^   |      |     |     |  <   |  >  |   |  {  |  }  |  /  |  =  |  _  |   &   |
-//                      |     |      |     |   |  $  |  |  |  ~  |
-                        bindings = <
-   &kp LS(EQUAL) &none &none &none &kp RA(N3) &kp LS(N5)   &kp LS(RBKT) &kp LS(MINUS) &kp LS(N2) &kp MINUS &kp RA(N2) &kp DEL
-   &kp RA(NUBS) &none &none &none &kp RA(LBKT) &kp RA(RBKT)   &kp LS(N8) &kp LS(N9) &kp LS(COMMA) &kp SQT &kp SEMI &kp LBKT
-   &kp EQUAL &none &none &none &kp NUBS &kp LS(NUBS)   &kp RA(SQT) &kp RA(BSLH) &kp LS(N7) &kp LS(N0) &kp LS(FSLH) &kp LS(N6)
-                                    &trans      &trans       &trans         &kp BSLH     &kp RA(N7)     &kp RA(EQUAL)
-                        >;
-                };
-
-                win_raise_layer {
-                        label = "Win 2";
-// -----------------------------------------------------------------------------------------
-// Layer 5 - Win 2
-// |  F1  |  F2 |  F3 |arrU |  F4 | F5  |   |  /  |  7  |  8  |  9  |  -  | WIN  |
-// |  F6  |  F7 |arrL |arrD |arrR | F8  |   |  *  |  4  |  5  |  6  |  +  |      |
-// |  F9  | F10 | F11 | F12 |     |     |   |  0  |  1  |  2  |  3  |  .  |      |
-//                    |     |     |     |   |enter|     |     |
-                        bindings = <
-
-   &kp F1     &kp F2   &kp F3   &kp UP   &kp F4    &kp F5            &kp LS(N7)  &kp N7 &kp N8 &kp N9 &kp FSLH &to 3
-   &kp F6     &kp F7   &kp LEFT   &kp DOWN  &kp RIGHT   &kp F8       &kp LS(N3) &kp N4 &kp N5 &kp N6 &kp LS(N1)  &none
-   &kp F9 &kp F10    &kp F11   &kp F12 &none &bt BT_NXT             &kp N0    &kp N1 &kp N2 &kp N3 &kp DOT   &none
-                                &trans   &trans    &trans            &kp KP_ENTER    &trans &trans
-                        >;
-                };
+        default_layer {
+            label = "Mac 0";
+            // -----------------------------------------------------------------------------------------
+            // Layer 0 - Mac 0
+            // |  esc  |  Q  |  W  |  E  |  R  |  T  |   |  Z  |  U  |  I  |  O  |     P     | BSPC |
+            // |  tab  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |     :     | shft |
+            // | ctrl  |  Y  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |     -     | caps |
+            //                     | GUI | LWR | SPC |   | ret | RSE | GUI |
+            bindings = <
+                &kp ESC      &kp Q    &kp W        &kp E        &kp R        &kp T            &kp Y        &kp U        &kp I        &kp O        &kp P            &kp BSPC
+                &kp TAB      &kp A    &kp S        &kp D        &lt 2 F      &kp G            &kp H        &lt 1 J      &kp K        &kp L        &kp LS(DOT)      &sk RSHFT
+                &sk LCTRL    &kp Z    &kp X        &kp C        &kp V        &kp B            &kp N        &kp M        &kp COMMA    &kp DOT      &kp FSLH         &kp CAPS
+                                                   &sk LGUI     &mo 1        &kp SPACE        &kp RET      &mo 2        &sk RGUI
+            >;
         };
+
+        lower_layer {
+            label = "Mac 1";
+            // -----------------------------------------------------------------------------------------
+            // Layer 1 - Mac 1
+            // |   `   |      |     |     |  #  |  %  |   |  !  |  ?  |  "  |  '  |  @  |  del  |
+            // |   \   |      |     |     |  [  |  ]  |   |  (  |  )  |  ;  |  ä  |  ö  |   ü   |
+            // |   ^   |      |     |     |  <  |  >  |   |  {  |  }  |  /  |  =  |  _  |   &   |
+            //                      |     |     |     |   |  $  |  |  |  ~  |
+            bindings = <
+                &kp LS(EQUAL)    &none    &none    &none          &kp RA(N3)     &kp LS(N5)        &kp LS(RBKT)     &kp LS(MINUS)    &kp LS(N2)       &kp MINUS    &kp RA(G)        &kp DEL
+                &kp RA(LS(N7))   &none    &none    &none          &kp RA(N5)     &kp RA(N6)        &kp LS(N8)       &kp LS(N9)       &kp LS(COMMA)    &kp SQT      &kp SEMI         &kp LBKT
+                &kp EQUAL        &none    &none    &none          &kp GRAVE      &kp LS(GRAVE)     &kp RA(N8)       &kp RA(N9)       &kp LS(N7)       &kp LS(N0)   &kp LS(FSLH)     &kp LS(N6)
+                                                   &trans         &trans         &trans            &kp BSLH         &kp RA(N7)       &kp RA(N)
+            >;
+        };
+
+        raise_layer {
+            label = "Mac 2";
+            // -----------------------------------------------------------------------------------------
+            // Layer 2 - Mac 2
+            // |  F1  |  F2  |  F3  | arrU |  F4  |   F5   |   |  /  |  7  |  8  |  9  |  -  | WIN  |
+            // |  F6  |  F7  | arrL | arrD | arrR |   F8   |   |  *  |  4  |  5  |  6  |  +  |      |
+            // |  F9  | F10  | F11  | F12  |      | btnnxt |   |  0  |  1  |  2  |  3  |  .  |      |
+            //                      |      |      |        |   | ent |     |     |
+            bindings = <
+                &kp F1     &kp F2     &kp F3       &kp UP       &kp F4         &kp F5           &kp LS(N7)       &kp N7     &kp N8     &kp N9     &kp FSLH       &to 3
+                &kp F6     &kp F7     &kp LEFT     &kp DOWN     &kp RIGHT      &kp F8           &kp LS(N3)       &kp N4     &kp N5     &kp N6     &kp LS(N1)     &none
+                &kp F9     &kp F10    &kp F11      &kp F12      &none          &bt BT_NXT       &kp N0           &kp N1     &kp N2     &kp N3     &kp DOT        &none
+                                                   &trans       &trans         &trans           &kp KP_ENTER     &trans     &trans
+            >;
+        };
+
+        win_default_layer {
+            label = "Win 0";
+            // -----------------------------------------------------------------------------------------
+            // Layer 3 - Win 0
+            // |  esc  |  Q  |  W  |  E  |  R  |  T  |   |  Z  |  U  |  I  |  O  |     P     | BSPC |
+            // |  tab  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |     :     | shft |
+            // | ctrl  |  Y  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |     -     | caps |
+            //                     | GUI | LWR | SPC |   | ret | RSE | GUI |
+            bindings = <
+                &kp ESC      &kp Q    &kp W        &kp E        &kp R        &kp T            &kp Y        &kp U        &kp I        &kp O        &kp P            &kp BSPC
+                &kp TAB      &kp A    &kp S        &kp D        &lt 5 F      &kp G            &kp H        &lt 4 J      &kp K        &kp L        &kp LS(DOT)      &sk RSHFT
+                &sk LCTRL    &kp Z    &kp X        &kp C        &kp V        &kp B            &kp N        &kp M        &kp COMMA    &kp DOT      &kp FSLH         &kp CAPS
+                                                   &sk LGUI     &mo 4        &kp SPACE        &kp RET      &mo 5        &sk RGUI
+            >;
+        };
+
+        win_lower_layer {
+            label = "Win 1";
+            // -----------------------------------------------------------------------------------------
+            // Layer 4 - Win 1
+            // |   `   |      |     |     |  #  |  %  |   |  !  |  ?  |  "  |  '  |  @  |  del  |
+            // |   \   |      |     |     |  [  |  ]  |   |  (  |  )  |  ;  |  ä  |  ö  |   ü   |
+            // |   ^   |      |     |     |  <  |  >  |   |  {  |  }  |  /  |  =  |  _  |   &   |
+            //                      |     |     |     |   |  $  |  |  |  ~  |
+            bindings = <
+                &kp LS(EQUAL)    &none    &none    &none            &kp RA(N3)       &kp LS(N5)        &kp LS(RBKT)     &kp LS(MINUS)    &kp LS(N2)       &kp MINUS      &kp RA(N2)       &kp DEL
+                &kp RA(NUBS)     &none    &none    &none            &kp RA(LBKT)     &kp RA(RBKT)      &kp LS(N8)       &kp LS(N9)       &kp LS(COMMA)    &kp SQT        &kp SEMI         &kp LBKT
+                &kp EQUAL        &none    &none    &none            &kp NUBS         &kp LS(NUBS)      &kp RA(SQT)      &kp RA(BSLH)     &kp LS(N7)       &kp LS(N0)     &kp LS(FSLH)     &kp LS(N6)
+                                                   &trans           &trans           &trans            &kp BSLH         &kp RA(N7)       &kp RA(EQUAL)
+            >;
+        };
+
+        win_raise_layer {
+            label = "Win 2";
+            // -----------------------------------------------------------------------------------------
+            // Layer 5 - Win 2
+            // |  F1  |  F2  |  F3  | arrU |  F4  |   F5   |   |  /  |  7  |  8  |  9  |  -  | WIN  |
+            // |  F6  |  F7  | arrL | arrD | arrR |   F8   |   |  *  |  4  |  5  |  6  |  +  |      |
+            // |  F9  | F10  | F11  | F12  |      | btnnxt |   |  0  |  1  |  2  |  3  |  .  |      |
+            //                      |      |      |        |   | ent |     |     |
+            bindings = <
+                &kp F1     &kp F2     &kp F3       &kp UP       &kp F4         &kp F5           &kp LS(N7)       &kp N7     &kp N8     &kp N9     &kp FSLH       &to 0
+                &kp F6     &kp F7     &kp LEFT     &kp DOWN     &kp RIGHT      &kp F8           &kp LS(N3)       &kp N4     &kp N5     &kp N6     &kp LS(N1)     &none
+                &kp F9     &kp F10    &kp F11      &kp F12      &none          &bt BT_NXT       &kp N0           &kp N1     &kp N2     &kp N3     &kp DOT        &none
+                                                   &trans       &trans         &trans           &kp KP_ENTER     &trans     &trans
+            >;
+        };
+    };
 };
