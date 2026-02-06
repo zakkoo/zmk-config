@@ -15,7 +15,7 @@
                 default_layer {
                         label = "Mac 0";
 // -----------------------------------------------------------------------------------------
-// Layer 0: QWERTZ Base Layer (Writing Optimized)
+// Layer 0 - Mac
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Z  |  U  |  I  |  O  |  P  | BSPC |
 // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  :  |      |
 // | SHFT |  Y  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  -  | ESC  |
@@ -31,23 +31,23 @@
                 lower_layer {
                         label = "Mac 1";
 // -----------------------------------------------------------------------------------------
-// Layer 1: Programming Symbols + Umlauts
-// |  `   |  '  |  @  |  #  |  &  |  %  |   |  !  |  ü  |  "  |  ö  |  ?  | DEL  |
-// | TAB  |  ä  |     |  ü  |  [  |  ]  |   |  (  |  )  |  ~  |  =  |  $  |      |
-// | SHFT |  ^  |  |  |  \  |  {  |  }  |   |  <  |  >  |  /  |  ;  |  _  |      |
-//                    |     |     |     |   |     |     |     |
+// Layer 1 - Mac 
+// |   `   |      |     |     |  #   |  %  |   |  !  |  ?  |  "  |  '  |  @  |   del |
+// |   \   |      |     |     |  [   |  ]  |   |  (  |  )  |  ;  |  ä  |  ö  |   ü   |
+// |   ^   |      |     |     |  <   |  >  |   |  {  |  }  |  /  |  =  |  _  |   &   |
+//                      |     |      |     |   |  $  |  |  |  ~  |
                         bindings = <
-   &kp LS(EQUAL) &kp MINUS &kp RA(G) &kp RA(N3) &kp LS(N6) &kp LS(N5)   &kp LS(RBKT) &kp LBKT &kp LS(N2) &kp SEMI &kp LS(MINUS) &kp DEL
-   &kp TAB       &kp SQT   &none     &kp LBKT   &kp RA(N5) &kp RA(N6)   &kp LS(N8) &kp LS(N9) &kp RA(N) &kp LS(N0) &kp BSLH &none
+   &kp LS(EQUAL) &kp MINUS &kp RA(G) &none &kp LS(N6) &kp LS(N5)   &kp LS(RBKT) &kp LBKT &kp LS(N2) &kp SEMI &kp LS(MINUS) &kp DEL
+   &kp TAB       &kp SQT   &none     &none &kp RA(N5) &kp RA(N6)   &kp LS(N8) &kp LS(N9) &kp RA(N) &kp LS(N0) &kp BSLH &none
    &kp LSHFT     &kp EQUAL &kp RA(N7) &kp RA(LS(N7)) &kp RA(N8) &kp RA(N9)   &kp GRAVE &kp LS(GRAVE) &kp LS(N7) &kp LS(COMMA) &kp LS(FSLH) &none
-                                    &trans      &trans       &trans         &trans     &trans     &trans
+                                    &trans      &trans       &trans         &kp LS(N4)     &kp LBKT     &kp RA(N3)
                         >;
                 };
 
                 raise_layer {
                         label = "Mac 2";
 // -----------------------------------------------------------------------------------------
-// Layer 2: Function Keys + Numpad (macOS)
+// Layer 2 - Mac 
 // |  F1  |  F2 |  F3 |  F4 |  F5 |  F6 |   |  /  |  7  |  8  |  9  |  -  | WIN  |
 // |  F7  |  F8 |  F9 | F10 | F11 | F12 |   |  *  |  4  |  5  |  6  |  +  |      |
 // |BTNXT |     |arrU |arrD |arrL |arrR |   |  0  |  1  |  2  |  3  |  .  |      |
@@ -63,7 +63,7 @@
                 win_default_layer {
                         label = "Win 0";
 // -----------------------------------------------------------------------------------------
-// Layer 3: QWERTZ Base Layer (Windows)
+// Layer 3 - Win
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Z  |  U  |  I  |  O  |  P  | BSPC |
 // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  :  |      |
 // | SHFT |  Y  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  -  | ESC  |
@@ -79,23 +79,23 @@
                 win_lower_layer {
                         label = "Win 1";
 // -----------------------------------------------------------------------------------------
-// Layer 4: Programming Symbols + Umlauts (Windows)
-// |  `   |  '  |  @  |  #  |  &  |  %  |   |  !  |  ü  |  "  |  ö  |  ?  | DEL  |
-// | TAB  |  ä  |     |  ü  |  [  |  ]  |   |  (  |  )  |  ~  |  =  |  $  |      |
-// | SHFT |  ^  |  |  |  \  |  {  |  }  |   |  <  |  >  |  /  |  ;  |  _  |      |
-//                    |     |     |     |   |     |     |     |
+// Layer 4 - Win
+// |   `   |      |     |     |  #   |  %  |   |  !  |  ?  |  "  |  '  |  @  |   del |
+// |   \   |      |     |     |  [   |  ]  |   |  (  |  )  |  ;  |  ä  |  ö  |   ü   |
+// |   ^   |      |     |     |  <   |  >  |   |  {  |  }  |  /  |  =  |  _  |   &   |
+//                      |     |      |     |   |  $  |  |  |  ~  |
                         bindings = <
-   &kp LS(EQUAL) &kp MINUS &kp RA(N2) &kp RA(N3) &kp LS(N6) &kp LS(N5)   &kp LS(RBKT) &kp LBKT &kp LS(N2) &kp SEMI &kp LS(MINUS) &kp DEL
-   &kp TAB       &kp SQT   &none      &kp LBKT   &kp RA(LBKT) &kp RA(RBKT)   &kp LS(N8) &kp LS(N9) &kp RA(EQUAL) &kp LS(N0) &kp BSLH &none
+   &kp LS(EQUAL) &kp MINUS &kp RA(N2) &none &kp LS(N6) &kp LS(N5)   &kp LS(RBKT) &kp LBKT &kp LS(N2) &kp SEMI &kp LS(MINUS) &kp DEL
+   &kp TAB       &kp SQT   &none      &none &kp RA(LBKT) &kp RA(RBKT)   &kp LS(N8) &kp LS(N9) &kp RA(EQUAL) &kp LS(N0) &none &none
    &kp LSHFT     &kp EQUAL &kp RA(N7) &kp RA(NUBS) &kp RA(SQT) &kp RA(BSLH)   &kp NUBS &kp LS(NUBS) &kp LS(N7) &kp LS(COMMA) &kp LS(FSLH) &none
-                                    &trans      &trans       &trans         &trans     &trans     &trans
+                                    &trans      &trans       &trans         &kp BSLH     &kp LBKT     &kp RA(N3)
                         >;
                 };
 
                 win_raise_layer {
                         label = "Win 2";
 // -----------------------------------------------------------------------------------------
-// Layer 5: Function Keys + Numpad (Windows)
+// Layer 5 - Win
 // |  F1  |  F2 |  F3 |  F4 |  F5 |  F6 |   |  /  |  7  |  8  |  9  |  -  | MAC  |
 // |  F7  |  F8 |  F9 | F10 | F11 | F12 |   |  *  |  4  |  5  |  6  |  +  |      |
 // |BTNXT |     |arrU |arrD |arrL |arrR |   |  0  |  1  |  2  |  3  |  .  |      |
