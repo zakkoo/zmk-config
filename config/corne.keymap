@@ -15,10 +15,10 @@
                 default_layer {
                         label = "Mac 0";
 // -----------------------------------------------------------------------------------------
-// Layer 0 - Mac
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Z  |  U  |  I  |  O  |  P  | BSPC |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  :  |      |
-// | SHFT |  Y  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  -  | ESC  |
+// Layer 0 - Mac 0
+// | esc  |  Q  |  W  |  E  |  R  |  T  |   |  Z  |  U  |  I  |  O  |  P  | BSPC |
+// | tab  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  :  | shft |
+// | ctrl |  Y  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  -  |      |
 //                    |GUIL | LWR | SPC |   | ENT | RSE |GUIR |
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P     &kp BSPC
@@ -31,7 +31,7 @@
                 lower_layer {
                         label = "Mac 1";
 // -----------------------------------------------------------------------------------------
-// Layer 1 - Mac
+// Layer 1 - Mac 1
 // |   `   |      |     |     |  #   |  %  |   |  !  |  ?  |  "  |  '  |  @  |   del |
 // |   \   |      |     |     |  [   |  ]  |   |  (  |  )  |  ;  |  ä  |  ö  |   ü   |
 // |   ^   |      |     |     |  <   |  >  |   |  {  |  }  |  /  |  =  |  _  |   &   |
@@ -47,7 +47,7 @@
                 raise_layer {
                         label = "Mac 2";
 // -----------------------------------------------------------------------------------------
-// Layer 2 - Mac 
+// Layer 2 - Mac 2
 // |  F1  |  F2 |  F3 |  F4 |  F5 |  F6 |   |  /  |  7  |  8  |  9  |  -  | WIN  |
 // |  F7  |  F8 |  F9 | F10 | F11 | F12 |   |  *  |  4  |  5  |  6  |  +  |      |
 // |BTNXT |     |arrU |arrD |arrL |arrR |   |  0  |  1  |  2  |  3  |  .  |      |
@@ -63,10 +63,10 @@
                 win_default_layer {
                         label = "Win 0";
 // -----------------------------------------------------------------------------------------
-// Layer 3 - Win
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Z  |  U  |  I  |  O  |  P  | BSPC |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  :  |      |
-// | SHFT |  Y  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  -  | ESC  |
+// Layer 3 - Win 0
+// | esc  |  Q  |  W  |  E  |  R  |  T  |   |  Z  |  U  |  I  |  O  |  P  | BSPC |
+// | tab  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  :  | shft |
+// | ctrl |  Y  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  -  |      |
 //                    |GUIL | LWR | SPC |   | ENT | RSE |GUIR |
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P     &kp BSPC
@@ -79,7 +79,7 @@
                 win_lower_layer {
                         label = "Win 1";
 // -----------------------------------------------------------------------------------------
-// Layer 4 - Win
+// Layer 4 - Win 1
 // |   `   |      |     |     |  #   |  %  |   |  !  |  ?  |  "  |  '  |  @  |   del |
 // |   \   |      |     |     |  [   |  ]  |   |  (  |  )  |  ;  |  ä  |  ö  |   ü   |
 // |   ^   |      |     |     |  <   |  >  |   |  {  |  }  |  /  |  =  |  _  |   &   |
@@ -95,7 +95,7 @@
                 win_raise_layer {
                         label = "Win 2";
 // -----------------------------------------------------------------------------------------
-// Layer 5 - Win
+// Layer 5 - Win 2
 // |  F1  |  F2 |  F3 |  F4 |  F5 |  F6 |   |  /  |  7  |  8  |  9  |  -  | MAC  |
 // |  F7  |  F8 |  F9 | F10 | F11 | F12 |   |  *  |  4  |  5  |  6  |  +  |      |
 // |BTNXT |     |arrU |arrD |arrL |arrR |   |  0  |  1  |  2  |  3  |  .  |      |
