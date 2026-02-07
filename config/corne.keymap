@@ -42,14 +42,14 @@
             label = "Mac 1";
             // -----------------------------------------------------------------------------------------
             // Layer 1 - Mac 1
-            // |   `   |      |     |     |  #  |  %  |   |  !  |  ?  |  "  |  '  |  @  |  del  |
+            // |   `   |      |     |     |  #  |  %  |   |  !  |  ?  |  "  |  '  |  =  |  del  |
             // |   \   |      |     |     |  [  |  ]  |   |  (  |  )  |  ;  |  ä  |  ö  |   ü   |
-            // |   ^   |      |     |     |  <  |  >  |   |  {  |  }  |  /  |  =  |  _  |   &   |
+            // |   ^   |      |     |     |  <  |  >  |   |  {  |  }  |  /  |  @  |  _  |   &   |
             //                      |     |     |     |   |  $  |  |  |  ~  |
             bindings = <
-                &kp LS(EQUAL)    &none    &none    &none          &kp RA(N3)     &kp LS(N5)        &kp LS(RBKT)     &kp LS(MINUS)    &kp LS(N2)       &kp MINUS    &kp RA(G)        &kp DEL
+                &kp LS(EQUAL)    &none    &none    &none          &kp RA(N3)     &kp LS(N5)        &kp LS(RBKT)     &kp LS(MINUS)    &kp LS(N2)       &kp MINUS    &kp LS(N0)       &kp DEL
                 &kp RA(LS(N7))   &none    &none    &none          &kp RA(N5)     &kp RA(N6)        &kp LS(N8)       &kp LS(N9)       &kp LS(COMMA)    &kp SQT      &kp SEMI         &kp LBKT
-                &kp EQUAL        &none    &none    &none          &kp GRAVE      &kp LS(GRAVE)     &kp RA(N8)       &kp RA(N9)       &kp LS(N7)       &kp LS(N0)   &kp LS(FSLH)     &kp LS(N6)
+                &kp EQUAL        &none    &none    &none          &kp GRAVE      &kp LS(GRAVE)     &kp RA(N8)       &kp RA(N9)       &kp LS(N7)       &kp RA(G)    &kp LS(FSLH)     &kp LS(N6)
                                                    &trans         &trans         &trans            &kp BSLH         &kp RA(N7)       &kp RA(N)
             >;
         };
@@ -58,14 +58,14 @@
             label = "Mac 2";
             // -----------------------------------------------------------------------------------------
             // Layer 2 - Mac 2
-            // |  F1  |  F2  |  F3  | arrU |  F4  |   F5   |   |  /  |  7  |  8  |  9  |  -  | WIN  |
+            // |  F1  |  F2  |  F3  | arrU |  F4  |   F5   |   |  /  |  7  |  8  |  9  |  .  | WIN  |
             // |  F6  |  F7  | arrL | arrD | arrR |   F8   |   |  *  |  4  |  5  |  6  |  +  |      |
-            // |  F9  | F10  | F11  | F12  |      | btnnxt |   |  0  |  1  |  2  |  3  |  .  |      |
+            // |  F9  | F10  | F11  | F12  |      | btnnxt |   |  0  |  1  |  2  |  3  |  -  |      |
             //                      |      |      |        |   | ent |     |     |
             bindings = <
-                &kp F1     &kp F2     &kp F3       &kp UP       &kp F4         &kp F5           &kp LS(N7)       &kp N7     &kp N8     &kp N9     &kp FSLH       &to 3
+                &kp F1     &kp F2     &kp F3       &kp UP       &kp F4         &kp F5           &kp LS(N7)       &kp N7     &kp N8     &kp N9     &kp DOT        &to 3
                 &kp F6     &kp F7     &kp LEFT     &kp DOWN     &kp RIGHT      &kp F8           &kp LS(N3)       &kp N4     &kp N5     &kp N6     &kp LS(N1)     &none
-                &kp F9     &kp F10    &kp F11      &kp F12      &none          &bt BT_NXT       &kp N0           &kp N1     &kp N2     &kp N3     &kp DOT        &none
+                &kp F9     &kp F10    &kp F11      &kp F12      &none          &bt BT_NXT       &kp N0           &kp N1     &kp N2     &kp N3     &kp FSLH       &none
                                                    &trans       &trans         &trans           &kp KP_ENTER     &trans     &trans
             >;
         };
@@ -90,14 +90,14 @@
             label = "Win 1";
             // -----------------------------------------------------------------------------------------
             // Layer 4 - Win 1
-            // |   `   |      |     |     |  #  |  %  |   |  !  |  ?  |  "  |  '  |  @  |  del  |
+            // |   `   |      |     |     |  #  |  %  |   |  !  |  ?  |  "  |  '  |  =  |  del  |
             // |   \   |      |     |     |  [  |  ]  |   |  (  |  )  |  ;  |  ä  |  ö  |   ü   |
-            // |   ^   |      |     |     |  <  |  >  |   |  {  |  }  |  /  |  =  |  _  |   &   |
+            // |   ^   |      |     |     |  <  |  >  |   |  {  |  }  |  /  |  @  |  _  |   &   |
             //                      |     |     |     |   |  $  |  |  |  ~  |
             bindings = <
-                &kp LS(EQUAL)    &none    &none    &none            &kp RA(N3)       &kp LS(N5)        &kp LS(RBKT)     &kp LS(MINUS)    &kp LS(N2)       &kp MINUS      &kp RA(N2)       &kp DEL
+                &kp LS(EQUAL)    &none    &none    &none            &kp RA(N3)       &kp LS(N5)        &kp LS(RBKT)     &kp LS(MINUS)    &kp LS(N2)       &kp MINUS      &kp LS(N0)       &kp DEL
                 &kp RA(NUBS)     &none    &none    &none            &kp RA(LBKT)     &kp RA(RBKT)      &kp LS(N8)       &kp LS(N9)       &kp LS(COMMA)    &kp SQT        &kp SEMI         &kp LBKT
-                &kp EQUAL        &none    &none    &none            &kp NUBS         &kp LS(NUBS)      &kp RA(SQT)      &kp RA(BSLH)     &kp LS(N7)       &kp LS(N0)     &kp LS(FSLH)     &kp LS(N6)
+                &kp EQUAL        &none    &none    &none            &kp NUBS         &kp LS(NUBS)      &kp RA(SQT)      &kp RA(BSLH)     &kp LS(N7)       &kp RA(N2)     &kp LS(FSLH)     &kp LS(N6)
                                                    &trans           &trans           &trans            &kp BSLH         &kp RA(N7)       &kp RA(EQUAL)
             >;
         };
@@ -106,14 +106,14 @@
             label = "Win 2";
             // -----------------------------------------------------------------------------------------
             // Layer 5 - Win 2
-            // |  F1  |  F2  |  F3  | arrU |  F4  |   F5   |   |  /  |  7  |  8  |  9  |  -  | MAC  |
+            // |  F1  |  F2  |  F3  | arrU |  F4  |   F5   |   |  /  |  7  |  8  |  9  |  .  | MAC  |
             // |  F6  |  F7  | arrL | arrD | arrR |   F8   |   |  *  |  4  |  5  |  6  |  +  |      |
-            // |  F9  | F10  | F11  | F12  |      | btnnxt |   |  0  |  1  |  2  |  3  |  .  |      |
+            // |  F9  | F10  | F11  | F12  |      | btnnxt |   |  0  |  1  |  2  |  3  |  -  |      |
             //                      |      |      |        |   | ent |     |     |
             bindings = <
-                &kp F1     &kp F2     &kp F3       &kp UP       &kp F4         &kp F5           &kp LS(N7)       &kp N7     &kp N8     &kp N9     &kp FSLH       &to 0
+                &kp F1     &kp F2     &kp F3       &kp UP       &kp F4         &kp F5           &kp LS(N7)       &kp N7     &kp N8     &kp N9     &kp DOT        &to 0
                 &kp F6     &kp F7     &kp LEFT     &kp DOWN     &kp RIGHT      &kp F8           &kp LS(N3)       &kp N4     &kp N5     &kp N6     &kp LS(N1)     &none
-                &kp F9     &kp F10    &kp F11      &kp F12      &none          &bt BT_NXT       &kp N0           &kp N1     &kp N2     &kp N3     &kp DOT        &none
+                &kp F9     &kp F10    &kp F11      &kp F12      &none          &bt BT_NXT       &kp N0           &kp N1     &kp N2     &kp N3     &kp FSLH       &none
                                                    &trans       &trans         &trans           &kp KP_ENTER     &trans     &trans
             >;
         };
