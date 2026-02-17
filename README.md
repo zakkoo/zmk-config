@@ -10,7 +10,7 @@ This configuration supports three distinct setups:
 
 2. Windows with Swiss German Layout (Layers 3-5)
 
-3. Windows with US International Layout (Layers 6-8)
+3. Windows with US Standard Layout (Layers 6-8)
 
 ## Switching Between Configurations
 
