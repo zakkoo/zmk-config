@@ -59,7 +59,7 @@
             >;
         };
 
-        mac_de_lower_layer {
+        mac_de_mo1_layer {
             label = "Mac 1";
             bindings = <
                 &kp LS(EQUAL)    &none    &none    &none          &kp RA(N3)     &kp LS(N5)        &kp LS(RBKT)     &kp LS(MINUS)    &kp LS(N2)       &kp MINUS    &kp LS(N0)       &kp DEL
@@ -69,7 +69,7 @@
             >;
         };
 
-        mac_de_raise_layer {
+        mac_de_mo2_layer {
             label = "Mac 2";
             bindings = <
                 &kp F1     &kp F2     &kp F3       &kp UP       &kp F4         &kp F5           &kp LS(N7)       &kp N7     &kp N8     &kp N9     &kp DOT        &kp BSPC
@@ -89,7 +89,7 @@
             >;
         };
 
-        win_de_lower_layer {
+        win_de_mo1_layer {
             label = "Win 1";
             bindings = <
                 &kp LS(EQUAL)    &none    &none    &none            &kp RA(N3)       &kp LS(N5)        &kp LS(RBKT)     &kp LS(MINUS)    &kp LS(N2)       &kp MINUS      &kp LS(N0)       &kp DEL
@@ -99,7 +99,7 @@
             >;
         };
 
-        win_de_raise_layer {
+        win_de_mo2_layer {
             label = "Win 2";
             bindings = <
                 &kp F1     &kp F2     &kp F3       &kp UP       &kp F4         &kp F5           &kp LS(N7)       &kp N7     &kp N8     &kp N9     &kp DOT        &kp BSPC
@@ -119,7 +119,7 @@
             >;
         };
 
-        win_us_intl_lower_layer {
+        win_us_intl_mo1_layer {
             label = "Win US 1";
             bindings = <
                 &kp GRAVE        &none    &none    &none            &kp LS(N3)       &kp LS(N5)        &kp LS(N1)       &kp LS(FSLH)     &kp LS(SQT)      &kp SQT        &kp EQUAL        &kp DEL
@@ -129,7 +129,7 @@
             >;
         };
 
-        win_us_intl_raise_layer {
+        win_us_intl_mo2_layer {
             label = "Win US 2";
             bindings = <
                 &kp F1     &kp F2     &kp F3       &kp UP       &kp F4         &kp F5           &kp FSLH         &kp N7     &kp N8     &kp N9     &kp DOT        &kp BSPC
