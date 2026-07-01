@@ -16,13 +16,13 @@
 // ============================================================================================
 // LAYER 0/3/6 - mo0 - Default Layer
 // ============================================================================================
-// | Esc  | Q   | W   | E   | R   |   T    |   | Z   | U   | I   | O   | P   | Bspc        |
-// | Tab  | A   | S   | D   | F   |   G    |   | H   | J   | K   | L   | :   | Shft        |
-// | Ctrl | Y   | X   | C   | V   |   B    |   | N   | M   | ,   | .   | -   | Caps        |
-//                    | Ctrl | mo1 | Space  |   | Ret | mo2 | Cmd |
+// | Esc   | Q   | W   | E   | R   |   T    |   | Z   | U   | I   | O   | P   | Bspc        |
+// | Tab   | A   | S   | D   | F   |   G    |   | H   | J   | K   | L   | :   | RShft       |
+// | LCtrl | Y   | X   | C   | V   |   B    |   | N   | M   | ,   | .   | -   | Caps        |
+//                    | LCtrl | mo1 | Space  |   | Ret | mo2 | RCmd |
 //
-// Note: Left thumb = Ctrl. Right thumb (RGUI) has a triple role depending on the OS:
-//       Cmd on macOS / Windows key on Windows / Super on Linux  (i.e. "Cmd/Windows/Super").
+// Note: LCtrl (keys 25 & 37) and RShft (key 24) are sticky mods (&sk). Right thumb RCmd (key 42, RGUI)
+//       has a triple role: Cmd on macOS / Windows key on Windows / Super on Linux ("Cmd/Windows/Super").
 //
 // ============================================================================================
 // LAYER 1/4/7 - mo1 - Symbols Layer
