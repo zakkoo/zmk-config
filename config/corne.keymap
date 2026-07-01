@@ -3,7 +3,7 @@
 // LAYERS 3-5: Windows with Swiss German (DE) Layout
 // LAYERS 6-8: Windows with US Standard 
 // ============================================================================================
-// Switch between setups using Raise + bottom-right key (cycles: Mac DE → Win DE → Win US)
+// Switch between setups using mo2 + bottom-right key (cycles: Mac DE → Win DE → Win US)
 //
 // ============================================================================================
 // LAYER 0/3/6 - Default Layer
@@ -11,13 +11,13 @@
 // | Esc  | Q   | W   | E   | R   |   T    |   | Z   | U   | I   | O   | P   | Bspc        |
 // | Tab  | A   | S   | D   | F   |   G    |   | H   | J   | K   | L   | :   | Shft        |
 // | Ctrl | Y   | X   | C   | V   |   B    |   | N   | M   | ,   | .   | -   | Caps        |
-//                    | Ctrl | LWR | Space  |   | Ret | RSE | Cmd |
+//                    | Ctrl | mo1 | Space  |   | Ret | mo2 | Cmd |
 //
 // Note: Left thumb = Ctrl. Right thumb (RGUI) has a triple role depending on the OS:
 //       Cmd on macOS / Windows key on Windows / Super on Linux  (i.e. "Cmd/Windows/Super").
 //
 // ============================================================================================
-// LAYER 1/4/7 - Lower Layer (Symbols)
+// LAYER 1/4/7 - mo1 Layer (Symbols)
 // ============================================================================================
 // |  `   |     |     |     | #   |   %    |   | !   | ?   | "   | '   | =   | Del         |
 // |  \   |     |     |     | [   |   ]    |   | (   | )   | ;   | ä   | ö   | ü           |
@@ -26,7 +26,7 @@
 // Note: Key codes differ between Swiss German and US International to produce same symbols
 //
 // ============================================================================================
-// LAYER 2/5/8 - Raise Layer (Function Keys & Numpad)
+// LAYER 2/5/8 - mo2 Layer (Function Keys & Numpad)
 // ============================================================================================
 // | F1   | F2  | F3  | ↑   | F4  |   F5   |   | /   | 7   | 8   | 9   | .   |  Bspc       |
 // | F6   | F7  | ←   | ↓   | →   |   F8   |   | *   | 4   | 5   | 6   | +   |             |
