@@ -21,8 +21,10 @@
 // |  LOpt |   Y   |   X   |   C   |   V   |   B   |                     |   N   |   M   |   ,   |   .   |   -   |  Caps |
 //                                 | LCtrl |  mo1  | Space |     |  Ret  |  mo2  |  RCmd |
 //
-// Note: All sticky (&sk). LOpt (key 25) = Left Option on macOS / Left Alt on Windows+Linux.
-//       LCtrl (key 37); RShft (key 24); RCmd (key 42, RGUI) = Cmd on macOS / Win key / Super on Linux.
+// Note: All sticky (&sk). LOpt (key 25) = Left Option on macOS / Left Alt on Windows+Linux. RShft (key 24).
+//       Thumb mods differ per world:
+//         Layer 0 (Mac):   key 37 = LCtrl;              key 42 = RCmd (RGUI).
+//         Layers 3/6 (Win): key 37 = LCmd (LGUI/Win key); key 42 = LCtrl.
 //
 // =======================================================================================================================
 // LAYER 1/4/7 - mo1 - Symbols Layer
@@ -93,7 +95,7 @@
                 &kp ESC      &kp Q    &kp W        &kp E        &kp R        &kp T                &kp Y            &kp U        &kp I        &kp O        &kp P            &kp BSPC
                 &kp TAB      &kp A    &kp S        &kp D        &kp F        &lt_quick 5 G        &lt_quick 4 H    &kp J        &kp K        &kp L        &kp LS(DOT)      &sk RSHFT
                 &sk LALT     &kp Z    &kp X        &kp C        &kp V        &kp B                &kp N            &kp M        &kp COMMA    &kp DOT      &kp FSLH         &kp CAPS
-                                                   &sk LCTRL     &mo 4        &kp SPACE            &kp RET          &mo 5        &sk RGUI
+                                                   &sk LGUI      &mo 4        &kp SPACE            &kp RET          &mo 5        &sk LCTRL
             >;
         };
 
@@ -123,7 +125,7 @@
                 &kp ESC      &kp Q    &kp W        &kp E        &kp R        &kp T                &kp Z            &kp U        &kp I        &kp O        &kp P            &kp BSPC
                 &kp TAB      &kp A    &kp S        &kp D        &kp F        &lt_quick 8 G        &lt_quick 7 H    &kp J        &kp K        &kp L        &kp SEMI         &sk RSHFT
                 &sk LALT     &kp Y    &kp X        &kp C        &kp V        &kp B                &kp N            &kp M        &kp COMMA    &kp DOT      &kp MINUS        &kp CAPS
-                                                   &sk LCTRL     &mo 7        &kp SPACE            &kp RET          &mo 8        &sk RGUI
+                                                   &sk LGUI      &mo 7        &kp SPACE            &kp RET          &mo 8        &sk LCTRL
             >;
         };
 
