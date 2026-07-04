@@ -1,34 +1,47 @@
-// ============================================================================================
+// =======================================================================================================================
 // LAYERS 0-2: Mac with Swiss German (DE) Layout
 // LAYERS 3-5: Windows with Swiss German (DE) Layout
 // LAYERS 6-8: Windows with US Standard 
-// ============================================================================================
-// Switch between setups using Raise + bottom-right key (cycles: Mac DE → Win DE → Win US)
+// =======================================================================================================================
+// Switch between setups using mo2 + bottom-right key (cycles: Mac DE → Win DE → Win US)
 //
-// ============================================================================================
-// LAYER 0/3/6 - Default Layer
-// ============================================================================================
-// | Esc  | Q   | W   | E   | R   |   T    |   | Z   | U   | I   | O   | P   | Bspc        |
-// | Tab  | A   | S   | D   | F   |   G    |   | H   | J   | K   | L   | :   | Shft        |
-// | Ctrl | Y   | X   | C   | V   |   B    |   | N   | M   | ,   | .   | -   | Caps        |
-//                    | Cmd | LWR | Space  |   | Ret | RSE | Cmd |
+// =======================================================================================================================
+// KEY NUMBERING  (refer to any physical key by its number, e.g. "remap key 38 in mo1 to X")
+// =======================================================================================================================
+// |   1   |   2   |   3   |   4   |   5   |   6   |                     |   7   |   8   |   9   |   10  |   11  |   12  |
+// |   13  |   14  |   15  |   16  |   17  |   18  |                     |   19  |   20  |   21  |   22  |   23  |   24  |
+// |   25  |   26  |   27  |   28  |   29  |   30  |                     |   31  |   32  |   33  |   34  |   35  |   36  |
+//                                 |   37  |   38  |   39  |     |   40  |   41  |   42  |
 //
-// ============================================================================================
-// LAYER 1/4/7 - Lower Layer (Symbols)
-// ============================================================================================
-// |  `   |     |     |     | #   |   %    |   | !   | ?   | "   | '   | =   | Del         |
-// |  \   |     |     |     | [   |   ]    |   | (   | )   | ;   | ä   | ö   | ü           |
-// |  ^   |     |     |     | <   |   >    |   | {   | }   | /   | @   | _   | &           |
-//                    |     |     |        |   | $   | |   | ~   |
+// =======================================================================================================================
+// LAYER 0/3/6 - mo0 - Default Layer
+// =======================================================================================================================
+// |  Esc  |   Q   |   W   |   E   |   R   |   T   |                     |   Z   |   U   |   I   |   O   |   P   |  Bspc |
+// |  Tab  |   A   |   S   |   D   |   F   |   G   |                     |   H   |   J   |   K   |   L   |   :   | RShft |
+// |  LOpt |   Y   |   X   |   C   |   V   |   B   |                     |   N   |   M   |   ,   |   .   |   -   |  Caps |
+//                                 | LCtrl |  mo1  | Space |     |  Ret  |  mo2  |  RCmd |
+//
+// Note: All sticky (&sk). LOpt (key 25) = Left Option on macOS / Left Alt on Windows+Linux. RShft (key 24).
+//       Thumb mods differ per world:
+//         Layer 0 (Mac):   key 37 = LCtrl;              key 42 = RCmd (RGUI).
+//         Layers 3/6 (Win): key 37 = LCmd (LGUI/Win key); key 42 = LCtrl.
+//
+// =======================================================================================================================
+// LAYER 1/4/7 - mo1 - Symbols Layer
+// =======================================================================================================================
+// |       |       |       |   `   |   #   |   %   |                     |   !   |   ?   |   "   |   '   |   =   |  Del  |
+// |       |       |       |   \   |   [   |   ]   |                     |   (   |   )   |   ;   |   ä   |   ö   |   ü   |
+// |       |       |       |   ^   |   <   |   >   |                     |   {   |   }   |   /   |   @   |   _   |   &   |
+//                                 |       |       |       |     |   $   |   |   |   ~   |
 // Note: Key codes differ between Swiss German and US International to produce same symbols
 //
-// ============================================================================================
-// LAYER 2/5/8 - Raise Layer (Function Keys & Numpad)
-// ============================================================================================
-// | F1   | F2  | F3  | ↑   | F4  |   F5   |   | /   | 7   | 8   | 9   | .   |  Bspc       |
-// | F6   | F7  | ←   | ↓   | →   |   F8   |   | *   | 4   | 5   | 6   | +   |             |
-// | F9   | F10 | F11 | F12 |     | BT Nxt |   |     | 1   | 2   | 3   | -   |  Next Setup |
-//                    |     |     |        |   | Ent |     | 0   |
+// =======================================================================================================================
+// LAYER 2/5/8 - mo2 - Function Keys & Numpad Layer
+// =======================================================================================================================
+// |   F1  |   F2  |   F3  |   ↑   |   F4  |   F5  |                     |   /   |   7   |   8   |   9   |   .   |  Bspc |
+// |   F6  |   F7  |   ←   |   ↓   |   →   |   F8  |                     |   *   |   4   |   5   |   6   |   +   |       |
+// |   F9  |  F10  |  F11  |  F12  |       |  BT>  |                     |       |   1   |   2   |   3   |   -   | Setup |
+//                                 |       |       |       |     |  Ent  |   0   |       |
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
@@ -51,28 +64,28 @@
             bindings = <
                 &kp ESC      &kp Q    &kp W        &kp E        &kp R        &kp T            &kp Y         &kp U        &kp I        &kp O        &kp P            &kp BSPC
                 &kp TAB      &kp A    &kp S        &kp D        &kp F        &lt_quick 2 G    &lt_quick 1 H &kp J        &kp K        &kp L        &kp LS(DOT)      &sk RSHFT
-                &sk LCTRL    &kp Z    &kp X        &kp C        &kp V        &kp B            &kp N         &kp M        &kp COMMA    &kp DOT      &kp FSLH         &kp CAPS
-                                                   &sk LGUI     &mo 1        &kp SPACE        &kp RET       &mo 2        &sk RGUI
+                &sk LALT     &kp Z    &kp X        &kp C        &kp V        &kp B            &kp N         &kp M        &kp COMMA    &kp DOT      &kp FSLH         &kp CAPS
+                                                   &sk LCTRL     &mo 1        &kp SPACE        &kp RET       &mo 2        &sk RGUI
             >;
         };
 
-        mac_de_lower_layer {
+        mac_de_mo1_layer {
             label = "Mac 1";
             bindings = <
-                &kp LS(EQUAL)    &none    &none    &none          &kp RA(N3)     &kp LS(N5)        &kp LS(RBKT)     &kp LS(MINUS)    &kp LS(N2)       &kp MINUS    &kp LS(N0)       &kp DEL
-                &kp RA(LS(N7))   &none    &none    &none          &kp RA(N5)     &kp RA(N6)        &kp LS(N8)       &kp LS(N9)       &kp LS(COMMA)    &kp SQT      &kp SEMI         &kp LBKT
-                &kp EQUAL        &none    &none    &none          &kp GRAVE      &kp LS(GRAVE)     &kp RA(N8)       &kp RA(N9)       &kp LS(N7)       &kp RA(G)    &kp LS(FSLH)     &kp LS(N6)
+                &none            &none    &none    &kp LS(EQUAL)  &kp RA(N3)     &kp LS(N5)        &kp LS(RBKT)     &kp LS(MINUS)    &kp LS(N2)       &kp MINUS    &kp LS(N0)       &kp DEL
+                &none            &none    &none    &kp RA(LS(N7)) &kp RA(N5)     &kp RA(N6)        &kp LS(N8)       &kp LS(N9)       &kp LS(COMMA)    &kp SQT      &kp SEMI         &kp LBKT
+                &none            &none    &none    &kp EQUAL      &kp GRAVE      &kp LS(GRAVE)     &kp RA(N8)       &kp RA(N9)       &kp LS(N7)       &kp RA(G)    &kp LS(FSLH)     &kp LS(N6)
                                                    &trans         &trans         &trans            &kp BSLH         &kp RA(N7)       &kp RA(N)
             >;
         };
 
-        mac_de_raise_layer {
+        mac_de_mo2_layer {
             label = "Mac 2";
             bindings = <
                 &kp F1     &kp F2     &kp F3       &kp UP       &kp F4         &kp F5           &kp LS(N7)       &kp N7     &kp N8     &kp N9     &kp DOT        &kp BSPC
                 &kp F6     &kp F7     &kp LEFT     &kp DOWN     &kp RIGHT      &kp F8           &kp LS(N3)       &kp N4     &kp N5     &kp N6     &kp LS(N1)     &none
                 &kp F9     &kp F10    &kp F11      &kp F12      &none          &bt BT_NXT       &trans           &kp N1     &kp N2     &kp N3     &kp FSLH       &to 3
-                                                   &trans       &trans         &trans           &kp KP_ENTER     &trans     &kp N0
+                                                   &trans       &trans         &trans           &kp KP_ENTER     &kp N0     &trans
             >;
         };
 
@@ -81,28 +94,28 @@
             bindings = <
                 &kp ESC      &kp Q    &kp W        &kp E        &kp R        &kp T                &kp Y            &kp U        &kp I        &kp O        &kp P            &kp BSPC
                 &kp TAB      &kp A    &kp S        &kp D        &kp F        &lt_quick 5 G        &lt_quick 4 H    &kp J        &kp K        &kp L        &kp LS(DOT)      &sk RSHFT
-                &sk LCTRL    &kp Z    &kp X        &kp C        &kp V        &kp B                &kp N            &kp M        &kp COMMA    &kp DOT      &kp FSLH         &kp CAPS
-                                                   &sk LGUI     &mo 4        &kp SPACE            &kp RET          &mo 5        &sk RGUI
+                &sk LALT     &kp Z    &kp X        &kp C        &kp V        &kp B                &kp N            &kp M        &kp COMMA    &kp DOT      &kp FSLH         &kp CAPS
+                                                   &sk LGUI      &mo 4        &kp SPACE            &kp RET          &mo 5        &sk LCTRL
             >;
         };
 
-        win_de_lower_layer {
+        win_de_mo1_layer {
             label = "Win 1";
             bindings = <
-                &kp LS(EQUAL)    &none    &none    &none            &kp RA(N3)       &kp LS(N5)        &kp LS(RBKT)     &kp LS(MINUS)    &kp LS(N2)       &kp MINUS      &kp LS(N0)       &kp DEL
-                &kp RA(NUBS)     &none    &none    &none            &kp RA(LBKT)     &kp RA(RBKT)      &kp LS(N8)       &kp LS(N9)       &kp LS(COMMA)    &kp SQT        &kp SEMI         &kp LBKT
-                &kp EQUAL        &none    &none    &none            &kp NUBS         &kp LS(NUBS)      &kp RA(SQT)      &kp RA(BSLH)     &kp LS(N7)       &kp RA(N2)     &kp LS(FSLH)     &kp LS(N6)
+                &none            &none    &none    &kp LS(EQUAL)    &kp RA(N3)       &kp LS(N5)        &kp LS(RBKT)     &kp LS(MINUS)    &kp LS(N2)       &kp MINUS      &kp LS(N0)       &kp DEL
+                &none            &none    &none    &kp RA(NUBS)     &kp RA(LBKT)     &kp RA(RBKT)      &kp LS(N8)       &kp LS(N9)       &kp LS(COMMA)    &kp SQT        &kp SEMI         &kp LBKT
+                &none            &none    &none    &kp EQUAL        &kp NUBS         &kp LS(NUBS)      &kp RA(SQT)      &kp RA(BSLH)     &kp LS(N7)       &kp RA(N2)     &kp LS(FSLH)     &kp LS(N6)
                                                    &trans           &trans           &trans            &kp BSLH         &kp RA(N7)       &kp RA(EQUAL)
             >;
         };
 
-        win_de_raise_layer {
+        win_de_mo2_layer {
             label = "Win 2";
             bindings = <
                 &kp F1     &kp F2     &kp F3       &kp UP       &kp F4         &kp F5           &kp LS(N7)       &kp N7     &kp N8     &kp N9     &kp DOT        &kp BSPC
                 &kp F6     &kp F7     &kp LEFT     &kp DOWN     &kp RIGHT      &kp F8           &kp LS(N3)       &kp N4     &kp N5     &kp N6     &kp LS(N1)     &none
                 &kp F9     &kp F10    &kp F11      &kp F12      &none          &bt BT_NXT       &trans           &kp N1     &kp N2     &kp N3     &kp FSLH       &to 6
-                                                   &trans       &trans         &trans           &kp KP_ENTER     &trans     &kp N0
+                                                   &trans       &trans         &trans           &kp KP_ENTER     &kp N0     &trans
             >;
         };
 
@@ -111,28 +124,28 @@
             bindings = <
                 &kp ESC      &kp Q    &kp W        &kp E        &kp R        &kp T                &kp Z            &kp U        &kp I        &kp O        &kp P            &kp BSPC
                 &kp TAB      &kp A    &kp S        &kp D        &kp F        &lt_quick 8 G        &lt_quick 7 H    &kp J        &kp K        &kp L        &kp SEMI         &sk RSHFT
-                &sk LCTRL    &kp Y    &kp X        &kp C        &kp V        &kp B                &kp N            &kp M        &kp COMMA    &kp DOT      &kp MINUS        &kp CAPS
-                                                   &sk LGUI     &mo 7        &kp SPACE            &kp RET          &mo 8        &sk RGUI
+                &sk LALT     &kp Y    &kp X        &kp C        &kp V        &kp B                &kp N            &kp M        &kp COMMA    &kp DOT      &kp MINUS        &kp CAPS
+                                                   &sk LGUI      &mo 7        &kp SPACE            &kp RET          &mo 8        &sk LCTRL
             >;
         };
 
-        win_us_intl_lower_layer {
+        win_us_intl_mo1_layer {
             label = "Win US 1";
             bindings = <
-                &kp GRAVE        &none    &none    &none            &kp LS(N3)       &kp LS(N5)        &kp LS(N1)       &kp LS(FSLH)     &kp LS(SQT)      &kp SQT        &kp EQUAL        &kp DEL
-                &kp BSLH         &none    &none    &none            &kp LBKT         &kp RBKT          &kp LS(N9)       &kp LS(N0)       &kp SEMI         &none          &none            &none
-                &kp LS(N6)       &none    &none    &none            &kp LS(COMMA)    &kp LS(DOT)       &kp LS(LBKT)     &kp LS(RBKT)     &kp FSLH         &kp LS(N2)     &kp LS(MINUS)    &kp LS(N7)
+                &none            &none    &none    &kp GRAVE        &kp LS(N3)       &kp LS(N5)        &kp LS(N1)       &kp LS(FSLH)     &kp LS(SQT)      &kp SQT        &kp EQUAL        &kp DEL
+                &none            &none    &none    &kp BSLH         &kp LBKT         &kp RBKT          &kp LS(N9)       &kp LS(N0)       &kp SEMI         &none          &none            &none
+                &none            &none    &none    &kp LS(N6)       &kp LS(COMMA)    &kp LS(DOT)       &kp LS(LBKT)     &kp LS(RBKT)     &kp FSLH         &kp LS(N2)     &kp LS(MINUS)    &kp LS(N7)
                                                    &trans           &trans           &trans            &kp LS(N4)       &kp LS(BSLH)     &kp LS(GRAVE)
             >;
         };
 
-        win_us_intl_raise_layer {
+        win_us_intl_mo2_layer {
             label = "Win US 2";
             bindings = <
                 &kp F1     &kp F2     &kp F3       &kp UP       &kp F4         &kp F5           &kp FSLH         &kp N7     &kp N8     &kp N9     &kp DOT        &kp BSPC
                 &kp F6     &kp F7     &kp LEFT     &kp DOWN     &kp RIGHT      &kp F8           &kp LS(N8)       &kp N4     &kp N5     &kp N6     &kp LS(EQUAL)  &none
                 &kp F9     &kp F10    &kp F11      &kp F12      &none          &bt BT_NXT       &trans           &kp N1     &kp N2     &kp N3     &kp MINUS      &to 0
-                                                   &trans       &trans         &trans           &kp KP_ENTER     &trans     &kp N0
+                                                   &trans       &trans         &trans           &kp KP_ENTER     &kp N0     &trans
             >;
         };
     };
