@@ -1,7 +1,21 @@
 // =======================================================================================================================
+// !! MAINTENANCE RULE - READ BEFORE EDITING ANY BINDING !!
+// =======================================================================================================================
+// The ASCII layer maps below are the documentation for this keymap. They are NOT auto-generated.
+// EVERY change to a `bindings = <...>` block MUST be mirrored in the matching ASCII map in this header,
+// in the SAME commit. A binding change without a doc update is an incomplete change.
+//
+// Checklist for any binding edit:
+//   1. Find the key's number in the KEY NUMBERING grid below.
+//   2. Edit the binding in all layers of that role (symbols = layers 1/4/7, fn/numpad = 2/5/8, default = 0/3/6)
+//      unless the change is deliberately world-specific.
+//   3. Update that key's cell in the corresponding ASCII map. Cells are 7 chars wide - keep the columns aligned.
+//   4. If the behavior is non-obvious or destructive, add a line to that layer's "Note:" block.
+//
+// =======================================================================================================================
 // LAYERS 0-2: Mac with Swiss German (DE) Layout
 // LAYERS 3-5: Windows with Swiss German (DE) Layout
-// LAYERS 6-8: Windows with US Standard 
+// LAYERS 6-8: Windows with US Standard
 // =======================================================================================================================
 // Switch between setups using mo2 + bottom-right key (cycles: Mac DE → Win DE → Win US)
 //
@@ -29,11 +43,13 @@
 // =======================================================================================================================
 // LAYER 1/4/7 - mo1 - Symbols Layer
 // =======================================================================================================================
-// |       |       |       |   `   |   #   |   %   |                     |   !   |   ?   |   "   |   '   |   =   |  Del  |
+// | BTclr |       |       |   `   |   #   |   %   |                     |   !   |   ?   |   "   |   '   |   =   |  Del  |
 // |       |       |       |   \   |   [   |   ]   |                     |   (   |   )   |   ;   |   ä   |   ö   |   ü   |
 // |       |       |       |   ^   |   <   |   >   |                     |   {   |   }   |   /   |   @   |   _   |   &   |
 //                                 |       |       |       |     |   $   |   |   |   ~   |
 // Note: Key codes differ between Swiss German and US International to produce same symbols
+//       BTclr (key 1) = &bt BT_CLR - clears the bond of the CURRENTLY SELECTED profile only.
+//       Re-pair from the host afterwards. Use &bt BT_CLR_ALL instead to wipe every profile.
 //
 // =======================================================================================================================
 // LAYER 2/5/8 - mo2 - Function Keys & Numpad Layer
@@ -72,7 +88,7 @@
         mac_de_mo1_layer {
             label = "Mac 1";
             bindings = <
-                &none            &none    &none    &kp LS(EQUAL)  &kp RA(N3)     &kp LS(N5)        &kp LS(RBKT)     &kp LS(MINUS)    &kp LS(N2)       &kp MINUS    &kp LS(N0)       &kp DEL
+                &bt BT_CLR       &none    &none    &kp LS(EQUAL)  &kp RA(N3)     &kp LS(N5)        &kp LS(RBKT)     &kp LS(MINUS)    &kp LS(N2)       &kp MINUS    &kp LS(N0)       &kp DEL
                 &none            &none    &none    &kp RA(LS(N7)) &kp RA(N5)     &kp RA(N6)        &kp LS(N8)       &kp LS(N9)       &kp LS(COMMA)    &kp SQT      &kp SEMI         &kp LBKT
                 &none            &none    &none    &kp EQUAL      &kp GRAVE      &kp LS(GRAVE)     &kp RA(N8)       &kp RA(N9)       &kp LS(N7)       &kp RA(G)    &kp LS(FSLH)     &kp LS(N6)
                                                    &trans         &trans         &trans            &kp BSLH         &kp RA(N7)       &kp RA(N)
@@ -102,7 +118,7 @@
         win_de_mo1_layer {
             label = "Win 1";
             bindings = <
-                &none            &none    &none    &kp LS(EQUAL)    &kp RA(N3)       &kp LS(N5)        &kp LS(RBKT)     &kp LS(MINUS)    &kp LS(N2)       &kp MINUS      &kp LS(N0)       &kp DEL
+                &bt BT_CLR       &none    &none    &kp LS(EQUAL)    &kp RA(N3)       &kp LS(N5)        &kp LS(RBKT)     &kp LS(MINUS)    &kp LS(N2)       &kp MINUS      &kp LS(N0)       &kp DEL
                 &none            &none    &none    &kp RA(NUBS)     &kp RA(LBKT)     &kp RA(RBKT)      &kp LS(N8)       &kp LS(N9)       &kp LS(COMMA)    &kp SQT        &kp SEMI         &kp LBKT
                 &none            &none    &none    &kp EQUAL        &kp NUBS         &kp LS(NUBS)      &kp RA(SQT)      &kp RA(BSLH)     &kp LS(N7)       &kp RA(N2)     &kp LS(FSLH)     &kp LS(N6)
                                                    &trans           &trans           &trans            &kp BSLH         &kp RA(N7)       &kp RA(EQUAL)
@@ -132,7 +148,7 @@
         win_us_intl_mo1_layer {
             label = "Win US 1";
             bindings = <
-                &none            &none    &none    &kp GRAVE        &kp LS(N3)       &kp LS(N5)        &kp LS(N1)       &kp LS(FSLH)     &kp LS(SQT)      &kp SQT        &kp EQUAL        &kp DEL
+                &bt BT_CLR       &none    &none    &kp GRAVE        &kp LS(N3)       &kp LS(N5)        &kp LS(N1)       &kp LS(FSLH)     &kp LS(SQT)      &kp SQT        &kp EQUAL        &kp DEL
                 &none            &none    &none    &kp BSLH         &kp LBKT         &kp RBKT          &kp LS(N9)       &kp LS(N0)       &kp SEMI         &none          &none            &none
                 &none            &none    &none    &kp LS(N6)       &kp LS(COMMA)    &kp LS(DOT)       &kp LS(LBKT)     &kp LS(RBKT)     &kp FSLH         &kp LS(N2)     &kp LS(MINUS)    &kp LS(N7)
                                                    &trans           &trans           &trans            &kp LS(N4)       &kp LS(BSLH)     &kp LS(GRAVE)
