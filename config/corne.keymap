@@ -7,7 +7,7 @@
 //
 // Checklist for any binding edit:
 //   1. Find the key's number in the KEY NUMBERING grid below.
-//   2. Edit the binding in all layers of that role (symbols = layers 1/4/7, fn/numpad = 2/5/8, default = 0/3/6)
+//   2. Edit the binding in all layers of that role (symbols = layers 1/4/7/10, fn/numpad = 2/5/8/11, default = 0/3/6/9)
 //      unless the change is deliberately world-specific.
 //   3. Update that key's cell in the corresponding ASCII map. Cells are 7 chars wide - keep the columns aligned.
 //   4. If the behavior is non-obvious or destructive, add a line to that layer's "Note:" block.
@@ -16,8 +16,9 @@
 // LAYERS 0-2: Mac with Swiss German (DE) Layout
 // LAYERS 3-5: Windows with Swiss German (DE) Layout
 // LAYERS 6-8: Windows with US Standard
+// LAYERS 9-11: Arch Linux with Swiss German (DE) Layout
 // =======================================================================================================================
-// Switch between setups using mo2 + bottom-right key (cycles: Mac DE → Win DE → Win US)
+// Switch between setups using mo2 + bottom-right key (cycles: Mac DE → Win DE → Win US → Arch DE)
 //
 // =======================================================================================================================
 // KEY NUMBERING  (refer to any physical key by its number, e.g. "remap key 38 in mo1 to X")
@@ -28,7 +29,7 @@
 //                                 |   37  |   38  |   39  |     |   40  |   41  |   42  |
 //
 // =======================================================================================================================
-// LAYER 0/3/6 - mo0 - Default Layer
+// LAYER 0/3/6/9 - mo0 - Default Layer
 // =======================================================================================================================
 // |  Esc  |   Q   |   W   |   E   |   R   |   T   |                     |   Z   |   U   |   I   |   O   |   P   |  Bspc |
 // |  Tab  |   A   |   S   |   D   |   F   |   G   |                     |   H   |   J   |   K   |   L   |   :   | RShft |
@@ -39,9 +40,12 @@
 //       Thumb mods differ per world:
 //         Layer 0 (Mac):   key 37 = LCtrl;              key 42 = RCmd (RGUI).
 //         Layers 3/6 (Win): key 37 = LCmd (LGUI/Win key); key 42 = LCtrl.
+//         Layer 9 (Linux):  key 37 = LCtrl;               key 42 = Super (LGUI).
+//           Layer 9 mirrors the Mac world, not Windows: Super sits where Cmd does. Making Super+C/V
+//           etc. actually behave like Cmd is host-side config (Hyprland binds / terminal keymaps).
 //
 // =======================================================================================================================
-// LAYER 1/4/7 - mo1 - Symbols Layer
+// LAYER 1/4/7/10 - mo1 - Symbols Layer
 // =======================================================================================================================
 // | BTclr |       |       |   `   |   #   |   %   |                     |   !   |   ?   |   "   |   '   |   =   |  Del  |
 // |       |       |       |   \   |   [   |   ]   |                     |   (   |   )   |   ;   |   ä   |   ö   |   ü   |
@@ -52,7 +56,7 @@
 //       Re-pair from the host afterwards. Use &bt BT_CLR_ALL instead to wipe every profile.
 //
 // =======================================================================================================================
-// LAYER 2/5/8 - mo2 - Function Keys & Numpad Layer
+// LAYER 2/5/8/11 - mo2 - Function Keys & Numpad Layer
 // =======================================================================================================================
 // |   F1  |   F2  |   F3  |   ↑   |   F4  |   F5  |                     |   /   |   7   |   8   |   9   |   .   |  Bspc |
 // |   F6  |   F7  |   ←   |   ↓   |   →   |   F8  |                     |   *   |   4   |   5   |   6   |   +   |       |
@@ -160,7 +164,37 @@
             bindings = <
                 &kp F1     &kp F2     &kp F3       &kp UP       &kp F4         &kp F5           &kp FSLH         &kp N7     &kp N8     &kp N9     &kp DOT        &kp BSPC
                 &kp F6     &kp F7     &kp LEFT     &kp DOWN     &kp RIGHT      &kp F8           &kp LS(N8)       &kp N4     &kp N5     &kp N6     &kp LS(EQUAL)  &none
-                &kp F9     &kp F10    &kp F11      &kp F12      &none          &bt BT_NXT       &trans           &kp N1     &kp N2     &kp N3     &kp MINUS      &to 0
+                &kp F9     &kp F10    &kp F11      &kp F12      &none          &bt BT_NXT       &trans           &kp N1     &kp N2     &kp N3     &kp MINUS      &to 9
+                                                   &trans       &trans         &trans           &kp KP_ENTER     &kp N0     &trans
+            >;
+        };
+
+        arch_de_default_layer {
+            label = "Arch 0";
+            bindings = <
+                &kp ESC      &kp Q    &kp W        &kp E        &kp R        &kp T                &kp Y            &kp U        &kp I        &kp O        &kp P            &kp BSPC
+                &kp TAB      &kp A    &kp S        &kp D        &kp F        &lt_quick 11 G       &lt_quick 10 H   &kp J        &kp K        &kp L        &kp LS(DOT)      &sk RSHFT
+                &sk LALT     &kp Z    &kp X        &kp C        &kp V        &kp B                &kp N            &kp M        &kp COMMA    &kp DOT      &kp FSLH         &kp CAPS
+                                                   &sk LCTRL     &mo 10       &kp SPACE            &kp RET          &mo 11       &sk LGUI
+            >;
+        };
+
+        arch_de_mo1_layer {
+            label = "Arch 1";
+            bindings = <
+                &bt BT_CLR       &none    &none    &kp LS(EQUAL)    &kp RA(N3)       &kp LS(N5)        &kp LS(RBKT)     &kp LS(MINUS)    &kp LS(N2)       &kp MINUS      &kp LS(N0)       &kp DEL
+                &none            &none    &none    &kp RA(NUBS)     &kp RA(LBKT)     &kp RA(RBKT)      &kp LS(N8)       &kp LS(N9)       &kp LS(COMMA)    &kp SQT        &kp SEMI         &kp LBKT
+                &none            &none    &none    &kp EQUAL        &kp NUBS         &kp LS(NUBS)      &kp RA(SQT)      &kp RA(BSLH)     &kp LS(N7)       &kp RA(N2)     &kp LS(FSLH)     &kp LS(N6)
+                                                   &trans           &trans           &trans            &kp BSLH         &kp RA(N7)       &kp RA(EQUAL)
+            >;
+        };
+
+        arch_de_mo2_layer {
+            label = "Arch 2";
+            bindings = <
+                &kp F1     &kp F2     &kp F3       &kp UP       &kp F4         &kp F5           &kp LS(N7)       &kp N7     &kp N8     &kp N9     &kp DOT        &kp BSPC
+                &kp F6     &kp F7     &kp LEFT     &kp DOWN     &kp RIGHT      &kp F8           &kp LS(N3)       &kp N4     &kp N5     &kp N6     &kp LS(N1)     &none
+                &kp F9     &kp F10    &kp F11      &kp F12      &none          &bt BT_NXT       &trans           &kp N1     &kp N2     &kp N3     &kp FSLH       &to 0
                                                    &trans       &trans         &trans           &kp KP_ENTER     &kp N0     &trans
             >;
         };
