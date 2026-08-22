@@ -81,7 +81,7 @@
         td_cs: tap_dance_ctrl_super {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             bindings = <&sk LCTRL>, <&sk LGUI>;
         };
     };
