@@ -40,9 +40,11 @@
 //       Thumb mods differ per world:
 //         Layer 0 (Mac):   key 37 = LCtrl;              key 42 = RCmd (RGUI).
 //         Layers 3/6 (Win): key 37 = LCmd (LGUI/Win key); key 42 = LCtrl.
-//         Layer 9 (Linux):  key 37 = LCtrl;               key 42 = Super (LGUI).
-//           Layer 9 mirrors the Mac world, not Windows: Super sits where Cmd does. Making Super+C/V
-//           etc. actually behave like Cmd is host-side config (Hyprland binds / terminal keymaps).
+//         Layer 9 (Linux):  keys 37 AND 42 = &td_cs tap-dance, Ctrl-first with Super behind a double-tap:
+//           tap = sticky LCtrl; hold = held LCtrl; double-tap = sticky Super (LGUI);
+//           double-tap+hold (tap, press again and keep holding) = held Super.
+//           Nothing latches after release beyond the normal sticky window - next press is Ctrl again.
+//           Making Super+C/V etc. behave like Cmd is host-side config (Hyprland binds / terminal keymaps).
 //
 // =======================================================================================================================
 // LAYER 1/4/7/10 - mo1 - Symbols Layer
@@ -74,6 +76,13 @@
             flavor = "tap-preferred";
             tapping-term-ms = <150>;
             bindings = <&mo>, <&kp>;
+        };
+
+        td_cs: tap_dance_ctrl_super {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&sk LCTRL>, <&sk LGUI>;
         };
     };
 
@@ -175,7 +184,7 @@
                 &kp ESC      &kp Q    &kp W        &kp E        &kp R        &kp T                &kp Y            &kp U        &kp I        &kp O        &kp P            &kp BSPC
                 &kp TAB      &kp A    &kp S        &kp D        &kp F        &lt_quick 11 G       &lt_quick 10 H   &kp J        &kp K        &kp L        &kp LS(DOT)      &sk RSHFT
                 &sk LALT     &kp Z    &kp X        &kp C        &kp V        &kp B                &kp N            &kp M        &kp COMMA    &kp DOT      &kp FSLH         &kp CAPS
-                                                   &sk LCTRL     &mo 10       &kp SPACE            &kp RET          &mo 11       &sk LGUI
+                                                   &td_cs        &mo 10       &kp SPACE            &kp RET          &mo 11       &td_cs
             >;
         };
 
